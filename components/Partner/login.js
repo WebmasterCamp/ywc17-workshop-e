@@ -1,6 +1,7 @@
 import React, { Fragment, useState, useCallback } from 'react'
 import { Input, Button } from 'antd'
 import OTPBox from './otp'
+import Link from 'next/link'
 
 const Login = () => {
     const [ isConfirmTelNo, setIsConfirmTelNo ] = useState(false)
@@ -22,6 +23,10 @@ const Login = () => {
                     <Button type='primary' onClick={() => setIsConfirmTelNo(true)}>ยืนยันเบอร์โทรศัพท์</Button>
                 )
             }
+
+            <Link href='/partner-system/tracking'>
+                เข้าหน้า tracking
+            </Link>
 
         </Fragment>
     )
