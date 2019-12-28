@@ -1,11 +1,12 @@
 import styled from "@emotion/styled";
-export default ({ name, description, age, score, onClick }) => {
+export default ({ name, description, age, score, onClick, margin }) => {
   const Card = styled.div`
     background: #ffffff;
     box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.18);
     border-radius: 8px;
     display: flex;
     cursor: pointer;
+    margin: ${props => props.margin};
   `;
 
   const Image = styled.div`
@@ -66,7 +67,7 @@ export default ({ name, description, age, score, onClick }) => {
     margin-bottom: 2px;
   `;
   return (
-    <Card onClick={onClick}>
+    <Card onClick={onClick} margin={margin}>
       <Image imageURL="../../images/caretaker-1.jpg" />
       <InfoContainer>
         <ColumnContainer>

@@ -31,15 +31,17 @@ export default () => {
             })
           );
         })
-        .map(careTaker => {
+        .map((careTaker, i) => {
           const { name, description, age, score } = careTaker;
           return (
             <Card
+              key={i}
               name={name}
               onClick={() => onCardClick(careTaker)}
               description={description}
               age={age}
               score={score}
+              margin="24px 10px"
             />
           );
         }),
