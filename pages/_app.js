@@ -45,7 +45,7 @@ const App = ({ Component, pageProps }) => {
       <style jsx global>
           {
             `
-              h1, h2, h3, h4, h5, h6, p, span {
+              html, body, h1, h2, h3, h4, h5, h6, p, span {
                 font-family: 'Pridi', serif !important;
                 color: #383838;
               }

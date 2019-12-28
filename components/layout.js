@@ -25,7 +25,7 @@ export const Layout = props => (
                 <Menu.Item key="3">nav 3</Menu.Item>
             </Menu>
         </Header>
-        <Content style={{ padding: '30px 50px', minHeight: '90vh' }}>
+        <Content style={{ padding: '30px 20px', minHeight: '90vh', background: 'white' }}>
             {props.children}
         </Content>
         <Footer hideFooter={props.hideFooter}>WOW This is footer !</Footer>

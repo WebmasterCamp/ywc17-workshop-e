@@ -13,19 +13,19 @@ const SummaryWrapper = styled.div`
     height: 40px;
     align-items: center;
     padding: 0 10px;
-    display: ${props => props.isUserConfirmationDetail ? 'none': 'flex'};
+    display: ${props => props.isUserConfirmDetail ? 'none': 'flex'};
 `
 
 const Reservation = () => {
-    const [ isUserConfirmaDetail, setIsUserConfirmaDetail ] = useState(true)
+    const [ isUserConfirmDetail, setIsUserConfirmDetail ] = useState(false)
     return (
         <Fragment>
             <Layout hideFooter>
-                <ReservationMain isUserConfirmaDetail={isUserConfirmaDetail} />
+                <ReservationMain isUserConfirmDetail={isUserConfirmDetail} />
             </Layout>
-            <SummaryWrapper isUserConfirmationDetail={isUserConfirmaDetail}>
+            <SummaryWrapper isUserConfirmDetail={isUserConfirmDetail}>
                 ราคารวม : 400 บาท
-                <Button type='primary' style={{marginLeft: 'auto'}} onClick={() => setIsUserConfirmaDetail(true)}>ยืนยันรายละเอียด</Button>
+                <Button type='primary' style={{marginLeft: 'auto'}} onClick={() => setIsUserConfirmDetail(true)}>ยืนยันรายละเอียด</Button>
             </SummaryWrapper>
         </Fragment>
     )
