@@ -23,7 +23,6 @@ export const rootContext = createContext(rootData);
 const App = ({ Component, pageProps }) => {
   const [userInfo, setUserInfo] = useState(initialUser);
   const [registerData, setRegisterData] = useState(initialRegisterData);
-  const [searchData, setSearchData] = useState(null);
 
   useEffect(() => {
     if (!userInfo) {
@@ -43,9 +42,7 @@ const App = ({ Component, pageProps }) => {
           userInfo,
           setUserInfo,
           registerData,
-          setRegisterData,
-          searchData,
-          setSearchData
+          setRegisterData
         }}
       >
         <Component {...pageProps} />

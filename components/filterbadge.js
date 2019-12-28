@@ -1,8 +1,10 @@
-import styled from '@emotion/styled';
+import styled from "@emotion/styled";
 
-export const Badge = styled.span`
-    border-radius: 8px;
-    padding: 2px 8px;
-    margin-right: 6px;
-    background: #FFC2C9;
-`
+const Badge = styled.span`
+  border-radius: 8px;
+  padding: 2px 8px;
+  margin-right: 6px;
+  background: #ffc2c9;
+`;
+
+export default Badge;

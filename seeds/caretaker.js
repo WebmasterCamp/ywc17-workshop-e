@@ -6,7 +6,9 @@ export default [
     personality: "open mind and adabtable to change",
     occupation: "gevernment officer",
     sepcies: [1, 2, 3, 4, 5, 6, 7],
-    location: "bangkok"
+    location: "bangkok",
+    age: 70,
+    imageURL: ""
   },
 
   {
@@ -16,7 +18,9 @@ export default [
     personality: "open mind and adabtable to change",
     occupation: "gevernment officer",
     sepcies: [1, 2, 3, 4, 5, 6, 7],
-    location: "bangkok"
+    location: "bangkok",
+    age: 65,
+    imageURL: ""
   },
   {
     review: [],
@@ -25,6 +29,8 @@ export default [
     personality: "open mind and adabtable to change",
     occupation: "gevernment officer",
     sepcies: [1, 2, 3, 4, 5, 6, 7],
-    location: "samutprakarn"
+    location: "samutprakarn",
+    age: 59,
+    imageURL: ""
   }
 ];
