@@ -48,6 +48,10 @@ const ReservationButton = styled.button`
     padding: 0;
     margin: 0;
 `
+const ThumbnailImage = styled.img`
+    max-width: 100%;
+    border-radius: 8px
+`
 const PartnerProfile = () => (
     <Fragment>
         <Layout hideFooter>
@@ -107,13 +111,13 @@ const PartnerProfile = () => (
                 <Topic>รูปภาพเพิ่มเติม</Topic>
                 <div className='row'>
                     <div className='col-4'>
-                        <img className='max-w-100' src='https://cdn.pixabay.com/photo/2019/08/07/14/10/dog-4390884_960_720.jpg' />
+                        <ThumbnailImage src='https://cdn.pixabay.com/photo/2019/08/07/14/10/dog-4390884_960_720.jpg' />
                     </div>
                     <div className='col-4'>
-                        <img className='max-w-100' src='https://cdn.pixabay.com/photo/2019/08/10/06/52/dog-4396286_960_720.jpg' />
+                        <ThumbnailImage src='https://cdn.pixabay.com/photo/2019/08/10/06/52/dog-4396286_960_720.jpg' />
                     </div>
                     <div className='col-4'>
-                        <img className='max-w-100' src='https://upload.wikimedia.org/wikipedia/commons/4/47/American_Eskimo_Dog.jpg' />
+                        <ThumbnailImage src='https://upload.wikimedia.org/wikipedia/commons/4/47/American_Eskimo_Dog.jpg' />
                     </div>
                 </div>
             </div>
