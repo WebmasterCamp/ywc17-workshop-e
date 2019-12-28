@@ -34,6 +34,7 @@ const App = ({ Component, pageProps }) => {
   return (
     <>
       <Helmet>
+        <title>Peterly - ผู้ดูแลสัตว์วัยเก๋า ใกล้บ้านคุณ</title>
         <link
           href="https://fonts.googleapis.com/css?family=Pridi:400,500&display=swap"
           rel="stylesheet"
