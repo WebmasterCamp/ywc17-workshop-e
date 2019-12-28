@@ -1,4 +1,5 @@
 import { createContext, useState } from "react";
+import "../css/grid.css";
 
 export const initialUser = {
   id: 1,
