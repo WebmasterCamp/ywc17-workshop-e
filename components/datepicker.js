@@ -39,7 +39,7 @@ export default () => {
   };
 
   return (
-    <div>
+    <div className="row justify-content-between">
       <DatePicker
         disabledDate={disabledStartDate}
         showTime

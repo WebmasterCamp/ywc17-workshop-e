@@ -3,36 +3,30 @@ import Select from "../components/select";
 import Button from "../components/button";
 import DatePicker from "../components/datepicker";
 import { Input } from "antd";
+import styled from "@emotion/styled";
+import { useMemo, useState } from "react";
+
+const location = ["bangkok", "samutprakarn"];
+const initialResult = [{ review: "" }];
 
 export default () => {
+  const [result, setResult] = useState(initialResult);
+  const handleSearchChange = e => {
+    const value = e.target.value;
+  };
   return (
     <>
-      {/* <style jsx>
-        {`
-          .container {
-            display: flex;
-          }
-        `}
-      </style> */}
       <div className="container">
         <div className="row">
-          <Input />
+          <Input onChange={handleSearchChange} placeholder="จังหวัด อำเภอ" />
         </div>
-        <div className="row">
-          <div className="col-6">
-            <Switch />
-          </div>
-          <div className="col-6">
-            <Select options={[{ value: "test", key: "test" }]} />
-          </div>
+        <div className="row justify-content-between">
+          <Switch className="col" />
+          <Select className="col" options={[{ value: "test", key: "test" }]} />
         </div>
+        <DatePicker className="row"></DatePicker>
         <div className="row">
-          <div className="col-6">
-            <Button>Search</Button>
-          </div>
-          <div className="col-6">
-            <DatePicker></DatePicker>
-          </div>
+          <Button full>Search</Button>
         </div>
       </div>
     </>
