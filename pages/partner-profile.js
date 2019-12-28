@@ -1,9 +1,9 @@
 import React, { Fragment } from 'react'
-import { Layout } from '../components/layout'
 import styled from '@emotion/styled'
-import { Comment, Tooltip, List } from 'antd'
+import { Comment, List, Button } from 'antd'
+
+import { Layout } from '../components/layout'
 import data from '../data/review'
-import { Button } from 'antd'
 
 const ProfileImage = styled.img`
     max-width: 100%;
