@@ -1,5 +1,6 @@
 import useUserInfo from "../hooks/user";
 import styled from "@emotion/styled";
+import NewNavbar from "../components/newnarbar";
 
 export default () => {
   const [userInfo] = useUserInfo();
@@ -13,6 +14,16 @@ export default () => {
     background-position: center;
     background-size: cover;
   `;
+
+  const Image2 = styled.div`
+    border-radius: 8px;
+    width: 121px;
+    height: 121px;
+    background-image: url("../images/cat.png");
+    background-position: center;
+    background-size: cover;
+  `;
+
   const MainText = styled.span`
     color: #383838;
   `;
@@ -64,49 +75,51 @@ export default () => {
     line-height: 22px;
     width: 30px;
     height: 25px;
-    /* identical to box height */
     color: #bdbdbd;
     border-radius: 20px;
     margin-right: 14px;
   `;
   return (
-    <Main className="container">
-      <div className="row">
-        <Image />
-        <div>
-          <MainText>น้องแมวเหมียว</MainText>
-          <div>
-            <InfoMain>ประเภทสัตว์</InfoMain>
-            <InfoText>แมว เปอร์เซีย</InfoText>
-          </div>
-          <div>
-            <InfoMain>วันเริ่มฝาก</InfoMain>
-            <InfoText>28 ธ.ค. 2562</InfoText>
-          </div>
-          <div>
-            <InfoMain>วันรับน้อง</InfoMain>
-            <InfoText>29 ธ.ค. 2562</InfoText>
+    <>
+      <NewNavbar />
+      <Main className="container">
+        <div className="row">
+          <Image />
+          <div className="col">
+            <MainText>น้องแมวเหมียว</MainText>
+            <div>
+              <InfoMain>ประเภทสัตว์</InfoMain>
+              <InfoText>แมว เปอร์เซีย</InfoText>
+            </div>
+            <div>
+              <InfoMain>วันเริ่มฝาก</InfoMain>
+              <InfoText>28 ธ.ค. 2562</InfoText>
+            </div>
+            <div>
+              <InfoMain>วันรับน้อง</InfoMain>
+              <InfoText>29 ธ.ค. 2562</InfoText>
+            </div>
           </div>
         </div>
-      </div>
-      <Line />
-      <TrackingCard>
-        หวีขนให้แมว
-        <Image />
         <Line />
-      </TrackingCard>
+        <TrackingCard>
+          หวีขนให้แมว
+          <Image2 />
+          <Line />
+        </TrackingCard>
 
-      <TrackingCard>
-        <Circle>2</Circle>ให้อาหารแมว
-      </TrackingCard>
-      <TrackingCard>
-        {" "}
-        <Circle>3</Circle>ให้ขนมแมว
-      </TrackingCard>
-      <TrackingCard>
-        {" "}
-        <Circle>4</Circle>พาไปเดินเล่น
-      </TrackingCard>
-    </Main>
+        <TrackingCard>
+          <Circle>2</Circle>ให้อาหารแมว
+        </TrackingCard>
+        <TrackingCard>
+          {" "}
+          <Circle>3</Circle>ให้ขนมแมว
+        </TrackingCard>
+        <TrackingCard>
+          {" "}
+          <Circle>4</Circle>พาไปเดินเล่น
+        </TrackingCard>
+      </Main>
+    </>
   );
 };
