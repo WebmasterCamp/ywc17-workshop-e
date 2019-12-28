@@ -1,14 +1,10 @@
-import { useState } from "react"
+import { useContext, useCallBack } from "react";
+import { rootContext } from "../pages/_app";
 
-export const initialUser = {
-    id: 1,
-    username: "test",
-    password: "123456",
-    orders: [],
-    name: "Khun new"
-}
+const useUserInfo = () => {
+  const rootData = useContext(rootContext);
+  const { userInfo, setUserInfo } = rootData;
+  return [userInfo, setUserInfo];
+};
 
-export const useUserInfo =  () => {
-    const userInfo = useState(initialUser);
-    return userInfo;  
-}
+export default useUserInfo;
