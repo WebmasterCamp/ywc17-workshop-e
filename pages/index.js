@@ -5,7 +5,9 @@ import Hero from '../components/Index/hero'
 import Partner from '../components/Index/partner'
 import Review from '../components/Index/review'
 import Blog from '../components/Index/blog'
-import styled from '@emotion/styled';
+import styled from '@emotion/styled'
+import Link from 'next/link'
+import { Button } from 'antd'
 
 const Advertise = styled.div`
   background: #FFC2C9;
@@ -43,6 +45,12 @@ export default () => {
           </div>
           <div className='col-12 pt-5'>
             <EndText>เพ็ทเทอร์ลี่คือผู้สูงอายุที่มีประสบการณ์ในการดูแลสัตว์เลี้ยง มีเวลาว่าง รักสัตว์ อยู่ในระแวกบ้านคุณ และพร้อมจะดูแลสัตว์เลี้ยงคุณเหมือนเป็นลูกหลาน ในวันที่คุณยุ่งหรือไม่มีเวลา เพ็ทเทอร์จะทำหน้าที่เหมือนเป็นเจ้าของคนที่สอง คอยใส่ใจดูแลอย่างเต็มที่</EndText>
+          </div>
+
+          <div className='col-12 text-center pt-5'>
+            <Link href='/partner-system'>
+              <Button type='primary' style={{ background: '#CF4E4E'}}>เข้าสู่ระบบของผู้สูงวัย</Button>
+            </Link>
           </div>
         </div>
       </div>
