@@ -1,5 +1,7 @@
 import { createContext, useState, useEffect } from "react";
-import "../css/grid.css";
+import { Helmet } from 'react-helmet'
+import '../css/grid.css';
+import '../css/utilities.min.css'
 
 export const initialUser = {
   id: 1,
@@ -37,6 +39,22 @@ const App = ({ Component, pageProps }) => {
 
   return (
     <>
+      <Helmet>
+        <link href="https://fonts.googleapis.com/css?family=Pridi:400,500&display=swap" rel="stylesheet" />
+      </Helmet>
+      <style jsx global>
+          {
+            `
+              h1, h2, h3, h4, h5, h6, p, span {
+                font-family: 'Pridi', serif !important;
+                color: #383838;
+              }
+              .max-w-100 {
+                max-width: 100%;
+              }
+            `
+          }
+        </style>
       <rootContext.Provider
         value={{
           userInfo,
