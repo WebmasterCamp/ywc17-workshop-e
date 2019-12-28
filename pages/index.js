@@ -9,7 +9,7 @@ import { rootContext } from "./_app";
 import { useRouter } from "next/router";
 import speciesData from "../data/species";
 
-const locations = ["bangkok", "samutprakarn"];
+const locations = ["กรุงเทพ", "สมุทรปราการ"];
 
 export default () => {
   const [searchValue, setSearchValue] = useState("");

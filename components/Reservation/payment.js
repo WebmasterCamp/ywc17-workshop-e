@@ -2,6 +2,8 @@ import React, { Fragment } from "react";
 import styled from "@emotion/styled";
 import { Button } from "antd";
 import useRegistration from "../../hooks/register";
+import useUserInfo from "../../hooks/user";
+import { useRouter } from "next/router";
 
 const PaymentWayBox = styled.div`
   border: 2px solid #fdad19;
@@ -20,9 +22,15 @@ const PaymentLogo = styled.img`
 `;
 const Payment = ({ isWalk, isWash, isNail, price }) => {
   const [registerData, setRegisterData] = useRegistration();
+  const router = useRouter();
+  const [userInfo, setUserInfo] = useUserInfo();
   const saveRegisterToUser = () => {
     const options = { isWalk, isNail, isWash };
     setRegisterData({ ...registerData, options });
+    const newUserInfo = { ...userInfo };
+    newUserInfo.orders.push({ ...registerData, options });
+    setUserInfo(newUserInfo);
+    router.push("/tracking");
   };
 
   return (

@@ -39,7 +39,6 @@ export default ({ startValue, setStartValue, endValue, setEndValue }) => {
   return (
     <div className="row justify-content-between">
       <DatePicker
-        className="col-2"
         disabledDate={disabledStartDate}
         showTime
         format="YYYY-MM-DD HH:mm:ss"
@@ -49,7 +48,6 @@ export default ({ startValue, setStartValue, endValue, setEndValue }) => {
         onOpenChange={handleStartOpenChange}
       />
       <DatePicker
-        className="col-2"
         disabledDate={disabledEndDate}
         showTime
         format="YYYY-MM-DD HH:mm:ss"
