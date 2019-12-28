@@ -3,7 +3,7 @@ import { rootContext } from "./_app";
 import { useRouter } from "next/router";
 import Card from "../components/search/card";
 import careTakers from "../seeds/caretaker";
-import Bage from "../components/filterbadge";
+import { Bage }  from "../components/filterbadge";
 import { isCat } from "../utils/helper";
 import sepeicesData from "../data/species";
 import moment from "moment";
