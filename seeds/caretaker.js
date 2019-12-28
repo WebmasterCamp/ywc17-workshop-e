@@ -5,7 +5,7 @@ export default [
     abititude: "abtitude 1",
     personality: "open mind and adabtable to change",
     occupation: "gevernment officer",
-    sepcies: [1, 2, 3, 4, 5, 6, 7],
+    species: [1],
     location: "bangkok",
     age: 70,
     imageURL: ""
@@ -17,7 +17,7 @@ export default [
     abititude: "abtitude 1",
     personality: "open mind and adabtable to change",
     occupation: "gevernment officer",
-    sepcies: [1, 2, 3, 4, 5, 6, 7],
+    species: [1],
     location: "bangkok",
     age: 65,
     imageURL: ""
@@ -28,7 +28,7 @@ export default [
     abititude: "abtitude 1",
     personality: "open mind and adabtable to change",
     occupation: "gevernment officer",
-    sepcies: [1, 2, 3, 4, 5, 6, 7],
+    species: [1],
     location: "samutprakarn",
     age: 59,
     imageURL: ""
