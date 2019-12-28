@@ -8,6 +8,7 @@ import { isCat } from "../utils/helper";
 import sepeicesData from "../data/species";
 import moment from "moment";
 import useRegistration from "../hooks/register";
+import Newnarbar from "../components/newnarbar";
 
 export default () => {
   const router = useRouter();
@@ -70,6 +71,7 @@ export default () => {
   }, [query]);
   return (
     <div>
+      <Newnarbar></Newnarbar>
       <div>{query && query.searchValue}</div>
       <Bage>
         {startDate} - {endDate}

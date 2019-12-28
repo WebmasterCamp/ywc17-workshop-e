@@ -1,12 +1,12 @@
 import React, { Fragment } from "react";
 
-import Navbar from "../components/navbar";
+import NewNavbar from "../components/newnarbar";
 import Hero from "../components/Index/hero";
 
 export default () => {
   return (
     <Fragment>
-      <Navbar />
+      <NewNavbar />
       <Hero />
     </Fragment>
   );
