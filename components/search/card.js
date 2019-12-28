@@ -5,6 +5,7 @@ export default ({ name, description, age, score, onClick }) => {
     box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.18);
     border-radius: 8px;
     display: flex;
+    cursor: pointer;
   `;
 
   const Image = styled.div`
