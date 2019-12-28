@@ -37,8 +37,40 @@ export default () => {
     margin: 5px 20px;
     border: 1px solid #e3e3e3;
   `;
+  const TrackingCard = styled.div`
+    background: #ffffff;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.15);
+    border-radius: 8px;
+    padding: 12px 11px;
+    font-family: Pridi;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 23px;
+    margin: 16px 0px;
+  `;
+
+  const Main = styled.div`
+    padding: 16px 24px;
+  `;
+
+  const Circle = styled.span`
+    border: 1px solid #bdbdbd;
+    box-sizing: border-box;
+    font-family: Pridi;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 22px;
+    width: 30px;
+    height: 25px;
+    /* identical to box height */
+    color: #bdbdbd;
+    border-radius: 20px;
+    margin-right: 14px;
+  `;
   return (
-    <div className="container">
+    <Main className="container">
       <div className="row">
         <Image />
         <div>
@@ -49,15 +81,32 @@ export default () => {
           </div>
           <div>
             <InfoMain>วันเริ่มฝาก</InfoMain>
-            <InfoText>แมว เปอร์เซีย</InfoText>
+            <InfoText>28 ธ.ค. 2562</InfoText>
           </div>
           <div>
             <InfoMain>วันรับน้อง</InfoMain>
-            <InfoText>แมว เปอร์เซีย</InfoText>
+            <InfoText>29 ธ.ค. 2562</InfoText>
           </div>
         </div>
       </div>
-      <Line /> 28 ธ.ค. 2562 วันเริ่มฝาก วันรับน้อง 29 ธ.ค. 2562
-    </div>
+      <Line />
+      <TrackingCard>
+        หวีขนให้แมว
+        <Image />
+        <Line />
+      </TrackingCard>
+
+      <TrackingCard>
+        <Circle>2</Circle>ให้อาหารแมว
+      </TrackingCard>
+      <TrackingCard>
+        {" "}
+        <Circle>3</Circle>ให้ขนมแมว
+      </TrackingCard>
+      <TrackingCard>
+        {" "}
+        <Circle>4</Circle>พาไปเดินเล่น
+      </TrackingCard>
+    </Main>
   );
 };
