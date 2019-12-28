@@ -55,7 +55,7 @@ export default () => {
             </EndText>
           </div>
 
-          <div className="col-12 text-center pt-5">
+          <div className="col-12 text-center py-5">
             <Link href="/partner-system">
               <Button type="primary" style={{ background: "#CF4E4E" }}>
                 เข้าสู่ระบบของผู้สูงวัย
