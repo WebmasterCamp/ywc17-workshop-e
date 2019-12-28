@@ -38,8 +38,8 @@ export default ({ current, handleModeChange }) => {
         value={current}
         style={{ marginBottom: 8 }}
       >
-        <TabButton value="dogs">Horizontal</TabButton>
-        <TabButton value="cats">Vertical</TabButton>
+        <TabButton value="หมา">สุนัข</TabButton>
+        <TabButton value="แมว">แมว</TabButton>
       </TabContainer>
     </div>
   );

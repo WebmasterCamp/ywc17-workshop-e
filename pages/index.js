@@ -7,6 +7,7 @@ import styled from "@emotion/styled";
 import { useMemo, useState, useCallback, useContext } from "react";
 import { rootContext } from "./_app";
 import { useRouter } from "next/router";
+import speciesData from "../data/species";
 
 const locations = ["bangkok", "samutprakarn"];
 
@@ -16,7 +17,6 @@ export default () => {
   const [currentSelect, setCurrentSelect] = useState(null);
   const [startValue, setStartValue] = useState(null);
   const [endValue, setEndValue] = useState(null);
-  const rootData = useContext(rootContext);
   const router = useRouter();
 
   const handleSearchChange = e => {
@@ -45,8 +45,32 @@ export default () => {
     });
   }, [searchValue, current, currentSelect, startValue, endValue]);
 
+  let filteredSpeciesData = speciesData.filter(data => {
+    if (current === "หมา") {
+      return data.key < 50;
+    } else if (current === "แมว") {
+      return data.key > 50;
+    } else {
+      return false;
+    }
+  });
+
+  // const LocationResult = styled.dic``;
+  const SearchContainer = styled.div`
+    display: flex;
+    flex-direction: column;
+    margin: 40px 24px 25px 24px;
+  `;
+
   return (
-    <div>
+    <SearchContainer>
+      <style jsx>
+        {`
+        .container {
+          margin
+        `}
+      </style>
+      <div>ดูแลศัตว์วัยเก๋า ใกล้บ้านคุณ</div>
       <div className="container">
         <div className="row">
           <Input
@@ -73,7 +97,8 @@ export default () => {
           <Select
             onChange={onSelectChange}
             className="col"
-            options={[{ value: "chiwawa", key: 1 }]}
+            palceholder="พันธ์สุนัข/แมว"
+            options={filteredSpeciesData}
           />
         </div>
         <DatePicker
@@ -97,10 +122,10 @@ export default () => {
             full
             onClick={handleSearch}
           >
-            Search
+            ค้นหา
           </Button>
         </div>
       </div>
-    </div>
+    </SearchContainer>
   );
 };

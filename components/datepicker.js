@@ -39,20 +39,22 @@ export default ({ startValue, setStartValue, endValue, setEndValue }) => {
   return (
     <div className="row justify-content-between">
       <DatePicker
+        className="col-2"
         disabledDate={disabledStartDate}
         showTime
         format="YYYY-MM-DD HH:mm:ss"
         value={startValue}
-        placeholder="Start"
+        placeholder="วันเริ่มฝาก"
         onChange={onStartChange}
         onOpenChange={handleStartOpenChange}
       />
       <DatePicker
+        className="col-2"
         disabledDate={disabledEndDate}
         showTime
         format="YYYY-MM-DD HH:mm:ss"
         value={endValue}
-        placeholder="End"
+        placeholder="วันรับคืน"
         onChange={onEndChange}
         open={endOpen}
         onOpenChange={handleEndOpenChange}
