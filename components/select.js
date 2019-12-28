@@ -3,7 +3,7 @@ import { Select } from "antd";
 const { Option } = Select;
 import styled from "@emotion/styled";
 
-export default ({ options }) => {
+export default ({ options, placeholder, onChange }) => {
   const SelectOption = styled(Option)`
     border-radius: 8px 0px 0px 8px;
     font-size: 15px;
@@ -14,15 +14,11 @@ export default ({ options }) => {
     <SelectOption key={key}>{value}</SelectOption>
   ));
 
-  const onChange = e => {
-    console.log(e, "onChange");
-  };
-
   return (
     <Select
       showSearch
       style={{ width: 200 }}
-      placeholder="Select a person"
+      placeholder={placeholder}
       optionFilterProp="children"
       onChange={onChange}
       filterOption={(input, option) =>

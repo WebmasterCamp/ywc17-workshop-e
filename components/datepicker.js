@@ -1,9 +1,7 @@
 import { DatePicker } from "antd";
 import { useState } from "react";
 
-export default () => {
-  const [startValue, setStartValue] = useState(null);
-  const [endValue, setEndValue] = useState(null);
+export default ({ startValue, setStartValue, endValue, setEndValue }) => {
   const [endOpen, setEndOpen] = useState(false);
 
   const disabledStartDate = startValue => {

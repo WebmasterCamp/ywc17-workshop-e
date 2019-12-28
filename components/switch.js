@@ -1,14 +1,7 @@
 import { Radio } from "antd";
-import { useState, useCallback } from "react";
 import styled from "@emotion/styled";
 
-export default props => {
-  const [current, setCurrent] = useState("dogs");
-
-  const handleModeChange = useCallback(e => {
-    setCurrent(e.target.value);
-  }, []);
-
+export default ({ current, handleModeChange }) => {
   const TabButton = styled(Radio.Button)`
     border-radius: 8px 0px 0px 8px;
     font-size: 15px;

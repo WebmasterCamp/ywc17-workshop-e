@@ -1,13 +1,11 @@
-import React from "react";
-import Searchbar from "../components/searchbar";
+import { useContext, useEffect } from "react";
+import { rootContext } from "./_app";
 
-const Home = () => {
-  const a = "";
-  return (
-    <div>
-      <Searchbar />
-    </div>
-  );
+export default () => {
+  const rootData = useContext(rootContext);
+  const { searchData } = rootData;
+  useEffect(() => {
+    console.log(rootData);
+  }, []);
+  return <div>{searchData && searchData.searchValue}</div>;
 };
-
-export default Home;

@@ -5,7 +5,8 @@ export default [
     abititude: "abtitude 1",
     personality: "open mind and adabtable to change",
     occupation: "gevernment officer",
-    sepcies: [1, 2, 3, 4, 5, 6, 7]
+    sepcies: [1, 2, 3, 4, 5, 6, 7],
+    location: "bangkok"
   },
 
   {
@@ -14,7 +15,8 @@ export default [
     abititude: "abtitude 1",
     personality: "open mind and adabtable to change",
     occupation: "gevernment officer",
-    sepcies: [1, 2, 3, 4, 5, 6, 7]
+    sepcies: [1, 2, 3, 4, 5, 6, 7],
+    location: "bangkok"
   },
   {
     review: [],
@@ -22,6 +24,7 @@ export default [
     abititude: "abtitude 1",
     personality: "open mind and adabtable to change",
     occupation: "gevernment officer",
-    sepcies: [1, 2, 3, 4, 5, 6, 7]
+    sepcies: [1, 2, 3, 4, 5, 6, 7],
+    location: "samutprakarn"
   }
 ];
