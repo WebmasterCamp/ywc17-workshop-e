@@ -35,10 +35,12 @@ const Hero = () => {
   const [currentSelect, setCurrentSelect] = useState(null);
   const [startValue, setStartValue] = useState(null);
   const [endValue, setEndValue] = useState(null);
+  const [isSearchBarOn, setSearchBarOn] = useState(false);
   const router = useRouter();
 
   const handleSearchChange = e => {
     const value = e.target.value;
+    // setSearchBarOn(true);
     setSearchValue(value);
   };
 
@@ -73,12 +75,38 @@ const Hero = () => {
     }
   });
 
-  // const LocationResult = styled.dic``;
+  const SearchResult = styled.div`
+    background-color: #ffffff;
+    width: 100%;
+    /* color: #ffffff; */
+    padding: 10px;
+  `;
   const SearchContainer = styled.div`
     display: flex;
     flex-direction: column;
     margin: 10px 24px 25px 24px;
   `;
+
+  const SearchResultComponent = useMemo(() => {
+    return (
+      isSearchBarOn &&
+      locations
+        .filter(location => location.includes(searchValue))
+        .map(location => {
+          return (
+            <SearchResult
+              key={location}
+              onClick={() => {
+                setSearchValue(location);
+                setSearchBarOn(false);
+              }}
+            >
+              {location}
+            </SearchResult>
+          );
+        })
+    );
+  });
   return (
     <HeroContainer>
       <h1>“ผู้ดูแลสัตว์วัยเก๋า ใกล้บ้านคุณ”</h1>
@@ -89,16 +117,9 @@ const Hero = () => {
               onChange={handleSearchChange}
               value={searchValue}
               placeholder="จังหวัด อำเภอ"
+              onClick={() => setSearchBarOn(true)}
             />
-            {locations
-              .filter(location => location.includes(searchValue))
-              .map(location => {
-                return (
-                  <div key={location} onClick={() => setSearchValue(location)}>
-                    {location}
-                  </div>
-                );
-              })}
+            {SearchResultComponent}
           </div>
           <div className="row justify-content-between">
             <Switch
