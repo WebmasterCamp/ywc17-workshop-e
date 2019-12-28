@@ -61,7 +61,8 @@ const ReservationMain = ({
   setNail,
   isWash,
   isWalk,
-  isNail
+  isNail,
+  price
 }) => {
   const {
     careTaker,
@@ -180,7 +181,14 @@ const ReservationMain = ({
           <Checkbox>สมัครเว็บไซต์เพื่อรับสิทธิประโยชน์</Checkbox>
         </Col>
       </Row>
-      {isUserConfirmDetail && <Payment />}
+      {isUserConfirmDetail && (
+        <Payment
+          price={price}
+          isWalk={isWalk}
+          isWash={isWash}
+          isNail={isNail}
+        />
+      )}
     </Fragment>
   );
 };

@@ -53,6 +53,7 @@ const Reservation = () => {
           isWalk={isWalk}
           isWash={isWash}
           isNail={isNail}
+          price={price}
         />
       </Layout>
       <SummaryWrapper isUserConfirmDetail={isUserConfirmDetail}>
@@ -60,7 +61,9 @@ const Reservation = () => {
         <Button
           type="primary"
           style={{ marginLeft: "auto" }}
-          onClick={() => setIsUserConfirmDetail(true)}
+          onClick={() => {
+            setIsUserConfirmDetail(true);
+          }}
         >
           ยืนยันรายละเอียด
         </Button>
