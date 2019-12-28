@@ -37,7 +37,7 @@ export default () => {
         `}
       </style>
       <div className="container">
-        <div className="row-a justify-content-between align-items-center">
+        <div className="row-a justify-content-start align-items-center">
           <img
             className="col col-2 god"
             style={{ width: "10px" }}

@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from '@emotion/styled'
+import Link from 'next/link'
 
 const Container = styled.div`
     min-height: 100vh;
@@ -22,8 +23,12 @@ export const Button = styled.button`
 `
 const PartnerSystem = () => (
     <Container>
-        <Button>สมัครสมาชิก</Button>
-        <Button>เข้าใช้งานระบบ</Button>
+        <Link href="/partner-system/register">
+            <Button>สมัครสมาชิก</Button>
+        </Link>
+        <Link href="/partner-system/login">
+            <Button>เข้าใช้งานระบบ</Button>
+        </Link>
     </Container>
 )
 
