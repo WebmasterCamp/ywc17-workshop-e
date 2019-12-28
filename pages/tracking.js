@@ -85,7 +85,7 @@ export default () => {
       <Main className="container">
         <div className="row">
           <Image />
-          <div>
+          <div className="col">
             <MainText>น้องแมวเหมียว</MainText>
             <div>
               <InfoMain>ประเภทสัตว์</InfoMain>
