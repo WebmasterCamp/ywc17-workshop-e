@@ -22,6 +22,7 @@ const HeroContainer = styled.div`
   flex-direction: column;
   align-items: center;
   background-image: url("../../images/hero_bg.jpg");
+  background-size: cover;
 
   h1 {
     color: white;
