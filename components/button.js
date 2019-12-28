@@ -1,7 +1,7 @@
 import { Button } from "antd";
 import styled from "@emotion/styled";
 
-export default ({ children, full, onClick }) => {
+export default ({ children, full, onClick, disabled }) => {
   const OurButton = styled(Button)`
     border-radius: 8px 8px 8px 8px;
     font-size: 15px;
@@ -11,7 +11,7 @@ export default ({ children, full, onClick }) => {
   `;
   return (
     <>
-      <OurButton onClick={onClick} full>
+      <OurButton onClick={onClick} full disabled={disabled}>
         {children}
       </OurButton>
     </>

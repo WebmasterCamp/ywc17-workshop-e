@@ -1,3 +1,5 @@
+import moment from "moment";
+
 export default [
   {
     review: [],
@@ -8,7 +10,8 @@ export default [
     species: [1],
     location: "bangkok",
     age: 70,
-    imageURL: ""
+    imageURL: "",
+    notAvailableDate: [moment().toString()]
   },
 
   {
@@ -20,7 +23,8 @@ export default [
     species: [1],
     location: "bangkok",
     age: 65,
-    imageURL: ""
+    imageURL: "",
+    notAvailableDate: [moment().toString()]
   },
   {
     review: [],
@@ -31,6 +35,7 @@ export default [
     species: [1],
     location: "samutprakarn",
     age: 59,
-    imageURL: ""
+    imageURL: "",
+    notAvailableDate: [moment().toString()]
   }
 ];

@@ -13,13 +13,11 @@ const locations = ["bangkok", "samutprakarn"];
 export default () => {
   const [searchValue, setSearchValue] = useState("");
   const [current, setCurrent] = useState("dogs");
-  const [currentSelect, setCurrentSelect] = useState("chiwawa");
+  const [currentSelect, setCurrentSelect] = useState(null);
   const [startValue, setStartValue] = useState(null);
   const [endValue, setEndValue] = useState(null);
   const rootData = useContext(rootContext);
   const router = useRouter();
-
-  const { setSearchData } = rootData;
 
   const handleSearchChange = e => {
     const value = e.target.value;
@@ -35,9 +33,8 @@ export default () => {
   }, []);
 
   const handleSearch = useCallback(() => {
-    console.log(searchValue, current, currentSelect, startValue, endValue);
-    router.push("/search", {
-      pathname: "search",
+    router.push({
+      pathname: "/search",
       query: {
         searchValue,
         current,
@@ -76,7 +73,7 @@ export default () => {
           <Select
             onChange={onSelectChange}
             className="col"
-            options={[{ value: 1, key: "chiwawa" }]}
+            options={[{ value: "chiwawa", key: 1 }]}
           />
         </div>
         <DatePicker
@@ -87,7 +84,19 @@ export default () => {
           className="row"
         ></DatePicker>
         <div className="row">
-          <Button full onClick={handleSearch}>
+          <Button
+            disabled={
+              !(
+                searchValue &&
+                current &&
+                currentSelect &&
+                startValue &&
+                endValue
+              )
+            }
+            full
+            onClick={handleSearch}
+          >
             Search
           </Button>
         </div>
